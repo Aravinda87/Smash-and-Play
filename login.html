@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+            $(document).ready(function(){
+                $('.fgp').hide();
+                $('.fgp1').hide();
+               $('.forgot').on('click',function(){
+                $('.fgp').fadeToggle(0);
+                $('.out').fadeToggle(0);
+               })
+               $('.back').on('click',function(){
+                $('.fgp').fadeToggle(0);
+                $('.out').fadeToggle(0);
+               })
+               $('.back1').on('click',function(){
+                $('.out').fadeToggle(0);
+                $('.fgp1').fadeToggle(0);
+               })
+            $('.fgpmail').on('click',function(){
+                var fp = $('.eml').val();
+            if(fp == "aravinda.turuvekere@gmail.com")
+            {
+                $('.fgp1').show();
+                $('.fgp').hide();
+            }
+            else{
+                alert("invalid email");
+            }
+            $('.eml').val("");
+            })
+            });
+    </script>
+    <style>
+		form i {
+			margin-left: -30px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+    <my-header></my-header>
+        <div class="section1">
+            <div class="log">
+                    <div class="trans">
+                        <div class="out">
+                        <h1>LOGIN FORM</h1><br>
+                        <p>USER NAME</p>
+                        <input type="text"
+					name="userID" id="username">
+                    <br><br>
+                        <p>PASSWORD</p>
+
+                        <input type="password"
+					name="password" id="password" />
+
+                        <i class="bi bi-eye-slash"
+					id="togglePassword"></i>
+                        <br><br>
+                        <a class="forgot" style="color: blue;" href="#">ForgotPassword?</a>
+                        <a href="register.html">    Sign Up?</a>
+                        <br><br>
+                        <input type="submit" onclick="validate()" value="LOGIN">
+                    </div>
+                        <br>
+                        <div class="fgp">
+                            <button class="back"><</button>
+                            <br><br>
+                        <p>ENTER E-MAIL</p>
+                        <input type="email" class="eml"
+                        name="email" id="email" placeholder="e-mail"/>
+                        <br><br>
+                        <input type="submit" class="fgpmail" value="check">
+                    </div>
+                    <div class="fgp1">
+                        <button class="back1"><</button>
+                        <br><br>
+                    <p>enter new password</p>
+                    <input type="email"
+                    name="email1" id="email" placeholder="e-mail"/>
+                    <br><br>
+                    <p>confirm password</p>
+                    <input type="email"
+                    name="email2" id="email" placeholder="e-mail"/>
+                    <br><br>
+                    <input type="submit" class="change" value="change">
+                </div>
+                    </div>
+            </div>
+        </div>
+        <my-footer></my-footer>
+        <script>
+            const togglePassword = document
+                .querySelector('#togglePassword');
+    
+            const password = document.querySelector('#password');
+    
+            togglePassword.addEventListener('click', () => {
+                // Toggle the type attribute using
+                // getAttribure() method
+                const type = password
+                    .getAttribute('type') === 'password' ? 'text' : 'password';
+                password.setAttribute('type', type);
+                // Toggle the eye and bi-eye icon
+                this.classList.toggle('bi-eye');
+            });
+
+            function validate(){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if ( username == "user" && password == "pass@123"){
+            alert ("Login successfully");
+            window.location = "page1.html";  
+            }
+            else{
+               alert ("Login unsuccessfully");
+            }
+            }
+        </script>   
+</body>
+</html>

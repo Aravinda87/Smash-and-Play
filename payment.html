@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/payment.css">
+    <script>
+
+        function myfun(cnum,cvv,expiry){
+          // cvv
+          if(cvv.value=="")
+            {
+                alert("cvv number id empty");
+                return false;
+            }
+            else if(!cvv.value.match(/^\d{3}$/))
+            {
+                alert("invalide cvv number"); 
+                cvv.focus();
+                cvv.select();
+                return false;
+            }
+            else{
+              return true;
+            //  alert("Payment Done Successfully");
+                }
+                // expiry
+                if(expiry.value=="")
+            {
+                alert("expiry date empty");
+                return false;
+            }
+            else if(!expiry.value.match(/^(0[1-9]|1[0-2])\/?([0-9]{2})$/))
+            {
+                alert("invalide expiry date"); 
+                expiry.focus();
+                expiry.select();
+                return false;
+            }
+            else{
+              return true;
+            //  alert("Payment Done Successfully");
+                }
+                // cnum
+            if(cnum.value=="")
+            {
+                alert("card number id empty");
+                return false;
+            }
+            else if(!cnum.value.match(/^\d{16}$/))
+            {
+                alert("invalide card number"); 
+                cnum.focus();
+                cnum.select();
+                return false;
+            }
+            else{
+              return true;
+            //  alert("Payment Done Successfully")       
+            }
+          }
+          if(myfun().return == true)
+          {
+           alert("Payment Done Successfully")       
+          }
+    </script>
+</head>
+<body>
+    <div class="body-text">Write your name in the right fields. Also write your imaginary card number. By clicking CVV field card will turn.</div>
+  <form>
+    <div class="form-container">
+      <div class="personal-information">
+        <h1>Payment Information</h1>
+      </div> <!-- end of personal-information -->
+           
+          <input id="column-left" type="text" name="first-name" placeholder="First Name"/>
+          <input id="column-right" type="text" name="last-name" placeholder="Surname"/>
+          <input id="input-field" type="text" name="cnum" placeholder="Card Number"/>
+          <input id="column-left" type="text" name="expiry" placeholder="MM / YY"/>
+          <input id="column-right" type="text" name="cvv" placeholder="CVV"/>
+         
+          <div class="card-wrapper"></div>
+      
+          <input id="input-field" type="text" name="streetaddress" required="required" autocomplete="on" maxlength="45" placeholder="Streed Address"/>
+          <input id="column-left" type="text" name="city" required="required" autocomplete="on" maxlength="20" placeholder="City"/>
+          <input id="column-right" type="text" name="zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="5" placeholder="ZIP code"/>
+          <input id="input-field" type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email"/>
+          <input id="input-button" type="submit" onclick="myfun(cnum,cvv,expiry)" value="Submit"/>
+        
+    </form>
+  </div>
+
+</body>
+</html>

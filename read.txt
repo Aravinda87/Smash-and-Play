@@ -1,0 +1,6 @@
+1. all responsive
+    - all size 
+    - product page like playo
+    - login page nav height
+    - complete card design
+2. all github commands

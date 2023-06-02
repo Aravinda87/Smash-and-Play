@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/script.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/page1.css">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+    $("#prd-date").datepicker({minDate:0});
+});
+</script>
+<body>
+    <my-header></my-header>
+    <div class="section">
+        <div class="second1">
+            <div class="left">
+                <div class="five" >
+                    PowerSmash Badminton Academy
+                    <p>Gali no 23, Sharma colony, Sector 24, Rohini, Delhi- 110085</p>
+                </div>
+                <div class="five">
+                    <BR>DATE : <input type="text" id="prd-date" placeholder="date">
+                </div>
+                <div class="five">
+                    <BR>START TIME : <select name="" id="">
+                        <option value="">7 AM </option>
+                        <option value="">8 AM</option>
+                        <option value="">9 AM</option>
+                        <option value="">10 AM</option>
+                        <option value="">3 PM</option>
+                        <option value="">4 PM</option>
+                        <option value="">5 PM</option>
+                        <option value="">6 PM</option>
+                        <option value="">7 PM</option>
+                    </select>
+                </div>
+                <div class="five">
+                    <BR>DURATION : <select name="" id="">
+                        <option value="">1 HOUR</option>
+                        <option value="">2 HOUR</option>
+                        <option value="">3 HOUR</option>
+                    </select>
+
+                </div>
+                <div class="five">
+                    <BR>COURT : <select name="" id="">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                    </div>
+            </div>
+            <div class="right">
+                <div class="two" style="height: 118px;">
+                    <H3 >TIMINGS</H3>
+                    <p>morning 6 am to 10am<br>evening 4 pm to 9pm</p>
+                </div>
+                <div class="two" id="googleMap" style="height: 354px;">
+                
+                        <div id="map" style="width:100%; height: 100%;"></div>
+                        <script src="https://maps.googleapis.com/maps/api/js"></script>
+                        <script>
+                              var map_parameters = { center: {lat: 12.9716, lng: 77.5946}, zoom: 8};
+                              var map = new google.maps.Map(document.getElementById('map'), map_parameters);
+                              
+                              var position1 = { position: {lat: 12.9716, lng: 77.5946}, map: map };
+                              var position2 = { position: {lat: 12.2958, lng: 76.6394}, map: map };
+                              
+                              var marker1 = new google.maps.Marker(position1);
+                              var marker2 = new google.maps.Marker(position2);
+                
+                    </script>
+                </div>
+                <a href="payment.html"> <div class="two" style="height: 75px;border-radius: 10px;">
+                    <button type="submit" >BOOK NOW</button>
+                </div></a>
+            </div>
+        </div>
+    </div>
+    <my-footer></my-footer>
+</body>
+</html>
