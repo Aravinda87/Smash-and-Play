@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+            font-family: sans-serif;
+        }
+         .nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        a{
+            cursor: pointer;
+            text-decoration: none;
+        }
+        a li{
+            padding: 10px 30px 2px 30px;
+            margin-right: 20px;
+        }
+        ul{
+            font-size: 20px;
+            text-decoration: none;
+            list-style: none;
+            display: flex;
+            float: right;
+            justify-content: space-between;
+            padding: 0px;
+        }
+        .menu{
+
+            width: 70%;
+        }
+        .logo{
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            width: 30%;
+        }
+         img{
+            padding: 0px 50px;
+            height: 70px;
+            /* height: 100%; */
+        }
+        label{
+            padding-top: 30px;
+            display: none;
+            /* float: right; */
+        }
+        li:after{
+            content: "";
+            position: absolute;
+            background-color: black;
+            height: 2px;
+            width: 0;
+            border-radius: 10px;
+            left:0;
+            bottom: -10px;
+            transition: 0.3s;
+        }
+        li{
+            position: relative;
+        }
+        li:hover{
+            cursor: pointer;
+        }
+        li:hover:after{
+            width: 100% ;
+        }
+        @media only screen and (max-width: 600px) {
+            .nav{
+            display: block;
+            justify-content: space-between;
+        }
+            .menu{
+                width: 100%; 
+            }
+            .logo{
+            height: 80px;
+            width: 100%;
+        }
+        ul{
+            display: block;
+            float: none;
+        }
+        img{
+            height: 60px;
+            padding: 5px;
+        }
+        a{
+            text-align: center;
+        }
+        lable{
+            display: flex;
+            margin-right: 30px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <a href="index.html"><img src="/img/logo.jpeg" id="logo"></a>
+            <label>MENU</label>
+        </div>
+        <div class="menu">
+            <ul>
+                <a href="page1.html"><li>BOOK</li></a>
+                <a href="blog.html"><li>BLOG</li></a>
+                <a href="c.html"><li>CONTACT US</li></a>
+                <a href="login.html"><li>LOGIN / REGISTER</li></a>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
