@@ -3,7 +3,7 @@ class myHeader extends HTMLElement{
         this.innerHTML =`
         <div class="sec1">
         <nav>
-            <a href="index.html"><img src="/img/logo.jpeg" id="logo"></a>
+            <a href="index.html"><img src="https://raw.githubusercontent.com/Aravinda87/Smash-and-Play/main/img/logo.jpeg" id="logo"></a>
             <ul>
                 <a href="page1.html"><li>BOOK</li></a>
                 <a href="blog.html"><li>BLOG</li></a>
