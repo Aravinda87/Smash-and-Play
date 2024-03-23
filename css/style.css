@@ -37,7 +37,7 @@ nav{
 .section1{
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("/img/bg_img.jpg");
+    background-image: url("https://raw.githubusercontent.com/Aravinda87/Smash-and-Play/main/img/bg_img.jpg");
     height: 700px;
 }
 
